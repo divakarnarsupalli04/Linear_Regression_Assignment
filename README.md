@@ -1,48 +1,68 @@
-# Project Name
-> Outline a brief description of your project.
+Linear Regression Assignment
 
+Here’s a description of each step for analyzing the data:
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+Step 1: Reading and Understanding the Data
+In this step, we load the dataset into the workspace using appropriate libraries (e.g., pandas) and examine its structure. Key actions include:
 
-<!-- You can include any other section that is pertinent to your problem -->
+Checking the first few rows using head() to understand the data format.
+Identifying data types and missing values using info() and isnull().sum().
+Summarizing the data with descriptive statistics (describe()) to understand central tendencies and variability.
+Step 2: Visualising the Data
+We use data visualization techniques to explore relationships and identify patterns in the dataset. This includes:
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+Plotting distributions of numerical features using histograms or density plots.
+Visualizing relationships between features (e.g., scatter plots for continuous variables, bar plots for categorical variables).
+Exploring correlations using a heatmap.
+This step helps in detecting outliers, understanding distributions, and selecting important features.
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+Step 3: Data Preparation
+Data preparation involves cleaning and transforming the data for modeling. This includes:
 
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+Handling missing values by imputation or removal.
+Encoding categorical variables using techniques like one-hot encoding or label encoding.
+Scaling numerical features using normalization or standardization for algorithms sensitive to magnitude.
+Creating new features if necessary (e.g., polynomial terms or interactions).
+Step 4: Splitting the Data into Training and Testing Sets
+The dataset is split into two parts:
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+Training Set: Used to train the model.
+Testing Set: Used to evaluate the model's performance on unseen data. We typically use an 80:20 or 70:30 split ratio. This ensures the model is tested on data it hasn't seen during training.
+Step 5: Building a Linear Model
+This step involves:
 
+Selecting independent variables (X) and the target variable (y).
+Building a linear regression model using libraries like sklearn.
+Using techniques like Recursive Feature Elimination (RFE) to select the most important features.
+Iteratively refining the model by dropping features with high p-values or low significance.
+Step 6: Residual Analysis of the Train Data and Validation
+Residual analysis is performed to validate model assumptions and identify potential issues. Key actions include:
 
-## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+Plotting residuals vs. fitted values to check for randomness (no patterns indicate a good fit).
+Checking for normality of residuals using histograms or Q-Q plots.
+Verifying that residuals have constant variance (homoscedasticity).
+These checks ensure the model adheres to the assumptions of linear regression.
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+Step 7: Making Predictions Using the Final Model
+The final model, refined based on training data, is used to make predictions on:
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+Training Data: To check how well the model fits the known data.
+Testing Data: To evaluate the model's performance on unseen data.
+Predictions are compared against actual values to compute errors and assess the model’s reliability.
 
+Step 8: Model Evaluation
+Model performance is evaluated using metrics such as:
+
+Mean Absolute Error (MAE): Average of absolute errors.
+Mean Squared Error (MSE): Average of squared errors.
+R-squared (R²): Proportion of variance explained by the model.
+Adjusted R²: Adjusted for the number of predictors in the model.
+Additional steps may include analyzing overfitting or underfitting and comparing the model with alternative approaches.
+
+By following these structured steps, we ensure a thorough analysis and reliable results from the data modeling process.
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@divakarnarsupalli] - feel free to contact me!
 
 
 <!-- Optional -->
